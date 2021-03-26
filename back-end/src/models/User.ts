@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 class User{
 
     @PrimaryGeneratedColumn('uuid')
-    id: string
+    private id: string
 
     @Column()
     firstName: string
