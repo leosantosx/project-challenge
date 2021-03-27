@@ -59,12 +59,12 @@ Body:
 
 > Deletar usuário
 ```http
-DELETE https://localhost:4000/users/{ID_do_usuário}
+DELETE https://localhost:4000/users/ID_do_usuário
 ```
 
 > Editar usuário
 ```http
-PUT https://localhost:4000/users/{ID_do_usuário}
+PUT https://localhost:4000/users/ID_do_usuário
 Content-Type: application/json
 body: 
     {
