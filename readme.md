@@ -98,5 +98,5 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ### :memo: Licença
 
-Este projeto está sob a licença MIT. Consulte [LICENÇA](https://github.com/leosantosx/api-do-github/blob/master/LICENSE) para obter detalhes.
+Este projeto está sob a licença MIT. Consulte [LICENÇA](https://github.com/leosantosx/project-challenge/blob/master/LICENSE) para obter detalhes.
 
