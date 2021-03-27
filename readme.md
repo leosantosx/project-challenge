@@ -1,6 +1,6 @@
-# :octocat: CRUD para gerenciamento de usuários
+# CRUD para gerenciamento de usuários  
 
-<p>Gerencie seus usuários de forma rápida e eficiente</p>
+<p>:octocat: Gerencie seus usuários de forma rápida e eficiente</p>
 
 ### :art: Layout
 
