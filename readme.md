@@ -59,7 +59,21 @@ Body:
 
 > Deletar usuário
 ```http
-DELETE https://localhost:4000/users/{ID do usuário}
+DELETE https://localhost:4000/users/{ID_do_usuário}
+```
+
+> Editar usuário
+```http
+PUT https://localhost:4000/users/{ID_do_usuário}
+Content-Type: application/json
+body: 
+    {
+        "firstName": "Leo",
+        "lastName": "santos",
+        "email": "leonardo@gmail.com",
+        "age": 20
+    }
+
 ```
 
 
