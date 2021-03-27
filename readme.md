@@ -57,6 +57,11 @@ Body:
     }
 ```
 
+> Deletar usuário
+```
+DELETE https://localhost:4000/users/{ID do usuário}
+```
+
 
 
 ### :rocket: Tecnologias utilizadas
