@@ -1,4 +1,4 @@
-# CRUD para gerenciamento de usuários
+# :octocat: CRUD para gerenciamento de usuários
 
 <p>Gerencie seus usuários de forma rápida e eficiente</p>
 
@@ -19,6 +19,43 @@
 <p>Modal para deletar usuário</p>
 
 <img src="./.github/delete-user.jpg" alt="Foto do projeto">
+
+# :wrench: API 
+
+## Listar usuários
+
+> Exemplo Request
+```http
+GET https://localhost:4000/users
+```
+
+> Exemplo de resposta
+```
+    [
+        {
+            "id": "da8097ae-cb53-4bc3-98d9-449cc4fc8118",
+            "firstName": "Leonardo",
+            "lastName": "santos",
+            "email": "leonardo@gmail.com",
+            "age": 20
+        }
+    ]
+```
+
+> Criar usuário
+```http
+POST https://localhost:4000/users
+Content-Type: application/json
+
+Body:
+
+    {
+        "firstName": "Leo",
+        "lastName": "santos",
+        "email": "leonardo@gmail.com",
+        "age": 20
+    }
+```
 
 
 
