@@ -58,7 +58,7 @@ Body:
 ```
 
 > Deletar usuário
-```
+```http
 DELETE https://localhost:4000/users/{ID do usuário}
 ```
 
