@@ -22,7 +22,7 @@
 
 # :wrench: API 
 
-## Listar usuários
+#### Listar usuários
 
 > Exemplo Request
 ```http
@@ -42,7 +42,9 @@ GET https://localhost:4000/users
     ]
 ```
 
-> Criar usuário
+#### Criar usuário
+
+> Exemplo Request
 ```http
 POST https://localhost:4000/users
 Content-Type: application/json
@@ -57,12 +59,15 @@ Body:
     }
 ```
 
-> Deletar usuário
+#### Deletar usuário
+
+> Exemplo Request
 ```http
 DELETE https://localhost:4000/users/ID_do_usuário
 ```
+#### Editar usuário
 
-> Editar usuário
+> Exemplo Request
 ```http
 PUT https://localhost:4000/users/ID_do_usuário
 Content-Type: application/json
