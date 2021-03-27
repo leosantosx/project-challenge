@@ -4,6 +4,12 @@ export const Container = styled.section`
     max-width: 1120px;
     margin: 4rem auto; 
 
+    p{
+        color: var(--text);
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
     table{
 
         width: 100%;

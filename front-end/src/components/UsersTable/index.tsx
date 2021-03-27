@@ -41,53 +41,59 @@ export function UsersTable(){
                 onCloseEditUserModal={handleEditUserModalClose}
             />
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome completo</th>
-                        <th>E-mail</th>
-                        <th>Idade</th>
-                    </tr>
-                </thead>
+            {users.length === 0 ?
+                <p>Você não tem nenhum usuário cadastrado.</p>
+            :
 
-                <tbody>
-                    {users.map(user => (
-                        <tr key={user.id}>
-                            <td>{user.firstName} {user.lastName}</td>
-                            <td>{user.email}</td>
-                            <td>{user.age}</td>
-                            <td>
-                                <button
-                                    onClick={() => {
-                                        setCurrentId(user.id);
-                                        setIsOpenModalEditUser(true);
-                                    }}
-                                >
-                                    <img 
-                                        className="edit"
-                                        src={editImg} 
-                                        alt="Icon Edit"
-                                    />
-                                </button>
-                            </td>
-                            <td>
-                                <button
-                                    onClick={() => {
-                                        setCurrentId(user.id);
-                                        setIsOpenModalDeleteUser(true);
-                                    }}
-                                >
-                                    <img 
-                                        className="delete" 
-                                        src={deleteImg} 
-                                        alt="Icon delete"
-                                    />
-                                </button>
-                            </td>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome completo</th>
+                            <th>E-mail</th>
+                            <th>Idade</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+
+                    <tbody>
+                        {users.map(user => (
+                            <tr key={user.id}>
+                                <td>{user.firstName} {user.lastName}</td>
+                                <td>{user.email}</td>
+                                <td>{user.age}</td>
+                                <td>
+                                    <button
+                                        onClick={() => {
+                                            setCurrentId(user.id);
+                                            setIsOpenModalEditUser(true);
+                                        }}
+                                    >
+                                        <img 
+                                            className="edit"
+                                            src={editImg} 
+                                            alt="Icon Edit"
+                                        />
+                                    </button>
+                                </td>
+                                <td>
+                                    <button
+                                        onClick={() => {
+                                            setCurrentId(user.id);
+                                            setIsOpenModalDeleteUser(true);
+                                        }}
+                                    >
+                                        <img 
+                                            className="delete" 
+                                            src={deleteImg} 
+                                            alt="Icon delete"
+                                        />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+
+            }
         </Container>
     )
 }
