@@ -38,6 +38,9 @@ export function UsersProvider({ children }: ContextProviderProps){
         setUsers([...users, response.data])
     }
 
+    console.log(users);
+    
+
     return(
         <UsersContext.Provider value={{
             users,

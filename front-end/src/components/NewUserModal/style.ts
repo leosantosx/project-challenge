@@ -22,6 +22,10 @@ export const Container = styled.form`
 
     }
 
+    p{
+        color: var(--red-dark);
+    }
+
     button{
         border: 0;
         background-color: var(--blue);

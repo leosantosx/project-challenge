@@ -15,14 +15,24 @@ type NewUserModalProps = {
 
 export function NewUserModal({ onCloseNewUserModal, isOpen }: NewUserModalProps){
 
-    const { createUser } = useUsers();
+    const { createUser, users } = useUsers();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [age, setAge] = useState('');
+    const [error, setError] = useState('');
 
     function handleCreateUser(event: FormEvent){
         event.preventDefault();
+
+        const emailAlreadyExists = users.filter(
+            user => user.email == email
+        );
+        
+        if(emailAlreadyExists.length > 0){
+            setError('Este endereço de e-mail já está cadastrado');
+            return;
+        }
         
         createUser({
             firstName,
@@ -31,6 +41,7 @@ export function NewUserModal({ onCloseNewUserModal, isOpen }: NewUserModalProps)
             age,
         });
 
+        setError('');
         onCloseNewUserModal();
 
     }
@@ -70,7 +81,7 @@ export function NewUserModal({ onCloseNewUserModal, isOpen }: NewUserModalProps)
                 <input 
                     required 
                     type="email" 
-                    placeholder="email"
+                    placeholder="E-mail"
                     onChange={e => setEmail(e.target.value)}
                 />
 
@@ -81,6 +92,7 @@ export function NewUserModal({ onCloseNewUserModal, isOpen }: NewUserModalProps)
                     onChange={e => setAge(e.target.value)}
                 />
 
+                <p>{error}</p>
                 <button>Cadastrar</button>
 
             </Container>
